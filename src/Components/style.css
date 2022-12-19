@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.product{
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+}
+.container{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  border-spacing: 5px 10px;
+}
+.carrousel{
+  width: 100%;
+  height: 100%;
+  top: 100px;
+
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  
+  padding:10px;
+  margin-top: 16px;
+}
+.pic-card {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 189, 41, 0.15);
+  margin: 10px 10px 0 0;
+  height: 300px;
+  transition: 0.2s;
+}
+.pic-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 40px rgba(32, 129, 227, 0.35);
+}
+@media screen and (max-width: 1050px) {
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 900px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 550px) {
+  .cards-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+img {
+  height:200px;
+  width: 200px;
+  object-fit: cover;
+}
+.infos {
+  display: grid;
+  grid-template-columns: 90% 10%;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  margin-left: 10px;
+  line-height: 24px;
+  margin-top: 2px;
+}
+h4 {
+  margin: 0;
+  font-weight: 600;
+}
+.title p {
+  color: rgb(32, 128, 227);
+  margin: 0;
+}
+.title input {
+  height: 10px;
+  width: 60%;
+}
+.title button {
+  font-weight: 600;
+  background: rgb(32, 128, 227);
+  color: #fefffe;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.15s;
+  border-radius: 10px;
+  border: none;
+  height: 100%;
+  margin-left: 4px;
+}
+.title button:hover {
+  background: white;
+  border: 1px solid rgb(32, 128, 227);
+  color: rgb(32, 128, 227);
+}
+.btn-container {
+  cursor: pointer;
+  visibility: hidden;
+  transition: 0.7s;
+  opacity: 0;
+  transform: translate(10px, 8px);
+  color: grey;
+}
+.pic-card:hover .btn-container {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0, 8px);
+}
+.btn-container div {
+  transition: 0.2s;
+}
+.btn-container div:hover {
+  transform: scale(1.15);
+  color: black;
+}
+.video-background {
+  /* Used to position the video and content */
+ /* position: center;
+}
+
+.video-background__inner {
+  /* Positioned at the top left corner */
+  left: 0px;
+  position: center;
+  top: 55px;
+
+  /* Take full size */
+  height: 70%;
+  width: 100%;
+
+  /* Hide the scrollbar */
+  overflow: hidden;
+}
+
+.video-background__video {
+  object-fit: cover;
+
+  /* Take full width */
+  height: 100%;
+  max-width: 100%;
+}
+
+.video-background__content {
+  /* Positioned at the top left corner */
+  left: 0px;
+  position: absolute;
+  top: 0px;
+
+  /* Take full size */
+  height: 100%;
+  width: 100%;
+
+  /* Center the content */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
